@@ -1,0 +1,24 @@
+body{
+    position: sticky;
+    padding: 40px;
+    background-color: rgb(29, 29, 29);
+}
+div{
+    display: flex;
+    flex-direction: line;
+    gap: 10px;
+}
+
+.Tester{
+    display: flex;
+    flex-direction: column;
+}
+.Tester #padding{
+    flex-direction: row;
+}
+.Tester #input{
+    position: relative;
+    width: 100%;
+}
+
+/*.padding p .hover*/
