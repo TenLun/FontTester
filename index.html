@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script href=""></script>
+        <link rel="stylesheet/less" href="styles/style.less">
+        <script type="text/javascript" src='./scripts/less.min.js'></script>
+        <script type="text/typescript" src="./scripts/changing.ts"></script>
     </head>
     <body>
         <hr>
         <div class="Padding">
-            <p>Fontname</p>
-            <p>Styles</p>
-            <p>Tester</p>
-            <p>Glyphs</p>
-            <p>Languages</p>
+            <a>Fontname</a>
+            <a href="#styles">Styles</a>
+            <a href="#tester">Tester</a>
+            <a href="#glyphs">Glyphs</a>
+            <a href="#languages">Languages</a>
         </div>
         <hr>
         <div id="styles">
-            <b>{} Styles</b>
+            <b>Styles</b>
         </div>
         <hr>
-        <div class="Tester">
+        <div class="Tester" id="tester">
             <div id="padding">
                 <b>Tester</b>
-                {}px<input id="size" type="range" value="90" onchange="changeV()">
-                Tracking<input id="Tracking" type="range" value="5" onchange="changeV()">
+                px<input id="size" type="range" value="90">
+                Tracking<input id="tracking" type="range" value="5" onchange="changeV()">
             </div>
             <div id="input">
                 <input id="text-input" value="Start typing">
@@ -33,7 +34,7 @@
             <b>Glyphs</b>
         </div>
         <hr>
-        <div id="glyphs">
+        <div id="languages">
             <b>Languages</b>
         </div>
     </body>
