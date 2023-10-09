@@ -1,0 +1,80 @@
+@distance : 20px;
+@backcolor : rgb(255, 138, 138);
+
+body{
+    font-family: 'YorFont';
+    position: sticky;
+    padding-inline: @distance;
+    background-color: @backcolor;
+}
+div{
+    display: flex;
+    gap: 10px;
+}
+
+b{
+    position: relative;
+    width: @distance*8;
+    height: 100%;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    &:hover{
+        color: brown;
+    }
+}
+
+section{
+    flex-direction: column;
+}
+
+#padding{
+    flex-direction: row;
+}  
+
+.Tester{
+    position: relative;
+    left: @distance*8;
+    #text-input{
+        padding-inline: @distance;
+        background-color: @backcolor;
+        outline: none;
+        border: none;
+        padding: 20px;
+        width: 100%;
+        font-size: 90px;
+    }
+    
+}
+#showglyph{
+    width: 100px;
+    justify-content: center;
+    text-align: center;
+    font-size: 170px;
+}
+.Content{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+#input{
+    position: relative;
+    width: 100% - 20px;
+}
+
+
+#glyphshowing{
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+}
+
+#glyph-select{
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+}

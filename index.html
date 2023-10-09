@@ -3,12 +3,11 @@
     <head>
         <link rel="stylesheet/less" href="styles/style.less">
         <script type="text/javascript" src='./scripts/less.min.js'></script>
-        <script type="text/typescript" src="./scripts/changing.ts"></script>
     </head>
     <body>
         <hr>
         <div class="Padding">
-            <a>Fontname</a>
+            <input id='fontinput' type="file">Fontname
             <a href="#styles">Styles</a>
             <a href="#tester">Tester</a>
             <a href="#glyphs">Glyphs</a>
@@ -19,23 +18,39 @@
             <b>Styles</b>
         </div>
         <hr>
-        <div class="Tester" id="tester">
+        <div id="tester" class="Content">
             <div id="padding">
                 <b>Tester</b>
-                px<input id="size" type="range" value="90">
-                Tracking<input id="tracking" type="range" value="5" onchange="changeV()">
+                <div id="size-num">90 px</div><input id="size" type="range" value="90" min="20" oninput="changeV(this,'size')">
+                Tracking<input id="tracking" type="range" value="5" max="10" oninput="changeV(this)">
             </div>
-            <div id="input">
-                <input id="text-input" value="Start typing">
-            </div>
+            <div class="Tester" id="input"><input id="text-input" value="Start typing."></div>
         </div>
         <hr>
-        <div id="glyphs">
+        <div id="glyphs" class="Content">
             <b>Glyphs</b>
+            <div id="glyphshowing">
+                <div class="Tester" id="showglyph">A</div>
+                <div id="glyph-select">
+                    Uppercase
+                    <section>
+                        <button>A</button>
+                        <button>B</button>
+                    </section>
+                    <hr>
+                    Lowercase
+                    <section>
+                        <button>a</button>
+                        <button>b</button>
+                    </section>
+                </div>
+            </div>
         </div>
         <hr>
         <div id="languages">
             <b>Languages</b>
         </div>
+        <script type="text/javascript" src="./scripts/changing.js"></script>
     </body>
+    
 </html>
